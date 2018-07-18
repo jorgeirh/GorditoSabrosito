@@ -1,0 +1,23 @@
+{
+  "name": "proyecto-centraal",
+  "version": "1.0.0",
+  "description": "Final proyect for centraal",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jorgeirh/Proyecto-Centraal.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jorgeirh/Proyecto-Centraal/issues"
+  },
+  "homepage": "https://github.com/jorgeirh/Proyecto-Centraal#readme",
+  "devDependencies": {
+    "eslint": "^5.1.0",
+    "eslint-config-airbnb": "^17.0.0"
+  }
+}
