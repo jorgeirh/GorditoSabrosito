@@ -1,0 +1,35 @@
+*{ margin: 0; padding: 0; box-sizing: border-box; }
+
+body, li button, button, input{font-family: 'Montserrat', sans-serif;}
+
+
+header{color: #fff; background-color: #000}
+
+.headerBar{ width: 100%; height: 50px; position: fixed; border-bottom: 0.5px solid #d6d6d6; background-color: #fff;}
+
+.menuBar img { width: 90px; height: 30px;}
+
+.menuBar button, .menuBar img { margin-top: 10px; margin-left: 15px;}
+
+.menuBar{ display: flex; float: left;}
+
+.menuBar2{ display: flex; margin-right: 20px; margin-top: 10px; float: right;}
+
+header ul { list-style-type: none; display: inline-block; margin-right: 20px;}
+
+header li{ padding: 8px; background: none; background-color: #fff; color: #000;
+font-size: 14px; border: none;}
+
+header button{background-color: #fff; border: none; font-size: 14px; padding: 8px;}
+
+.slider{width: 100%; height: 300px; background-color: #dcdcdc;}
+
+.slider span{position: absolute; width: 100%; margin-top: 150px; text-align: center; color: #000}
+
+.placeOrder input{ width: 60%; height: 50px; border: 1px solid #d6d6d6; border-radius: 5px; text-align: center;}
+
+.placeOrder{text-align: center; margin: 70px 0;}
+
+.promos{  display: flex; width: 100%; justify-content: space-between;}
+
+.promos article{ margin: 0 80px;}
