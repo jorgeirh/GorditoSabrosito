@@ -6,6 +6,8 @@
     <link rel="stylesheet" href="css/styles.css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:800" rel="stylesheet">
     <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.css">
+
+    <link rel="shortcut icon" href="img/icon.png">
   </head>
   <body>
     <header>
@@ -14,19 +16,20 @@
           <button class="menuBtn"type="button" name="button" id="menu"><i class="fa fa-bars"></i></button>
           <img src="img/logo.png" alt="logo">
         </div>
-      <div class="menuBar2">
+      <div class="menuBar2 menuTransition">
         <div class="">
           <ul class="menu1">
-            <li>Categoria 1 <i class="fa fa-angle-down"></i></li>
+            <li>Categoria 1 <i class="fa fa-angle-down arrowRotate"></i></li>
           </ul>
           <ul>
-            <li>Categoria 2 <i class="fa fa-angle-down"></i></li>
+            <li>Categoria 2 <i class="fa fa-angle-down arrowRotate"></i></li>
           </ul>
           <ul>
-            <li>Categoria 3 <i class="fa fa-angle-down"></i></li>
+            <li>Categoria 3 <i class="fa fa-angle-down arrowRotate"></i></li>
           </ul>
-
-            <button type="button" name="button">Bienvenido Jorge</button>
+          <ul>
+            <li>Bienvenido Jorge</li>
+          </ul>
 
         <button class="menuBtn2" type="button" name="button" id="basket"><i class="fa fa-shopping-basket"></i></button>
         </div>
@@ -51,23 +54,23 @@
       </div>
 
       <div class="placeOrder">
-        <input type="search" value="" id="orderFood" placeholder="¿Que estas buscando?">
+        <input type="search" value="" id="orderFood" placeholder="Ingresa tu ubicación">
         <button type="search" id="orderFood"><i class="fa fa-search"></i></button>
       </div>
 
       <section class="promos">
         <article class="promo1">
-          <span>Promo 1</i></span>
+          <img src="img/rest1.jpg" alt="promo1">
         </article>
         <article class="promo2">
-          <span>Promo 2</span>
+          <img src="img/rest1.jpg" alt="promo3">
         </article>
         <article class="promo3">
-          <span>Promo 3</i></span>
+          <img src="img/rest1.jpg" alt="promo3">
         </article>
 
       </section>
 
-  <script src="js/index.js"></script>
+  <script src="js/slider.js"></script>
   </body>
 </html>
