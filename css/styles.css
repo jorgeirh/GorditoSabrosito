@@ -15,7 +15,10 @@
   transition: all 0.9 ease;
 }
 
-body, li button, button, input{
+body,
+li button,
+button,
+input{
   font-family: 'Montserrat', sans-serif;
 }
 
@@ -38,7 +41,8 @@ header{
   height: 30px;
 }
 
-.menuBar button, .menuBar img {
+.menuBar button,
+.menuBar img {
   margin-top: 10px;
   margin-left: 15px;
 }
@@ -131,7 +135,9 @@ input::placeholder{
   border-radius: 10px;
 }
 
-#slider, .wrap, .slide-content{
+#slider,
+.wrap,
+.slide-content{
   margin:0;
   padding:0;
   width: 100%;
