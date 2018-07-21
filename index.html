@@ -13,13 +13,19 @@
     <header>
       <div class="headerBar">
         <div class="menuBar">
-          <button class="menuBtn"type="button" name="button" id="menu"><i class="fa fa-bars"></i></button>
+          <button class="menuBtn" type="button" name="button" id="menu"><i class="fa fa-bars"></i></button>
           <img src="img/logo.png" alt="logo">
         </div>
       <div class="menuBar2 menuTransition">
-        <div class="">
-          <ul class="menu1">
-            <li>Categoria 1 <i class="fa fa-angle-down arrowRotate"></i></li>
+        <div class="menu1">
+          <ul class="">
+            <li>Categoria 1 <i class="fa fa-angle-down arrowRotate"></i>
+              <ul>
+                <li>Categoria 1</li>
+                <li>Categoria 2</li>
+                <li>Categoria 3</li>
+              </ul>
+            </li>
           </ul>
           <ul>
             <li>Categoria 2 <i class="fa fa-angle-down arrowRotate"></i></li>
@@ -53,9 +59,13 @@
         <div id="arrow-right" class="arrow"><i class="fa fa-angle-right"></i></div>
       </div>
 
+      <div class="mainTitle">
+        <h1>¿Estás listo para ordenar?</h1>
+      </div>
+
       <div class="placeOrder">
         <input type="search" value="" id="orderFood" placeholder="Ingresa tu ubicación">
-        <button type="search" id="orderFood"><i class="fa fa-search"></i></button>
+        <button type="search" id="searchFood"><i class="fa fa-search"></i></button>
       </div>
 
       <section class="promos">
@@ -63,7 +73,7 @@
           <img src="img/rest1.jpg" alt="promo1">
         </article>
         <article class="promo2">
-          <img src="img/rest1.jpg" alt="promo3">
+          <img src="img/rest2.jpg" alt="promo3">
         </article>
         <article class="promo3">
           <img src="img/rest1.jpg" alt="promo3">
