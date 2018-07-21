@@ -8,6 +8,9 @@
   --background-color: #000;
 }
 
+ul{
+  font-weight: 800;
+}
 .arrowRotate:hover{
   -webkit-transform: rotate(-90deg);
   transform: rotate(-90deg);
@@ -18,7 +21,8 @@
 body,
 li button,
 button,
-input{
+input,
+li{
   font-family: 'Montserrat', sans-serif;
 }
 
@@ -31,6 +35,7 @@ header{
   width: 100%;
   height: 50px;
   position: fixed;
+  top:0;
   background-color: #fff;
 }
 
@@ -50,22 +55,23 @@ header{
   float: left;
 }
 
-.menu1 li {
+.menu li {
   background-color: #fff;
 }
 
 }
 
-.menu1 > li ul li{
+.menu > li ul li{
   float: left;
 }
 
-.menu1 li ul{
+.menu li ul{
   display: none;
   position: absolute;
   min-width: 140px;
 }
-.menu1 li:hover > ul{
+
+.menu li:hover > ul{
   display: block;
 }
 .menuBar2{
@@ -74,7 +80,8 @@ header{
   float: right;
 }
 
-.mainTitle h1{
+.mainTitle h1,
+.mainTitle h2{
   text-align: center;
   margin-top: 60px;
 }
@@ -87,12 +94,10 @@ header ul {
 }
 
 header li{
-  padding: 8px;
   background: none;
   color: #000;
-  font-size: 14px;
   border: none;
-  padding:16px;
+  padding:15px;
 }
 
 header li:hover {
@@ -132,13 +137,13 @@ input::placeholder{
   width: 50px;
   border: 1px solid #d6d6d6;
   border-radius: 5px;
-  margin: 0;
+  margin-left: 0;
 }
 
 .placeOrder{
   display: block;
   text-align: center;
-  margin-top: 60px;
+  margin-top: 20px;
   margin-bottom: 100px;
 }
 
@@ -146,6 +151,7 @@ input::placeholder{
   display: flex;
   width: 100%;
   justify-content: space-between;
+  margin-top: 30px;
 }
 
 .promos article{
@@ -154,6 +160,29 @@ input::placeholder{
 }
 .promos img{
   border-radius: 10px;
+  box-shadow: 0px 0px  3px rgba(0, 0, 0, 0.9);
+
+
+}
+
+.submenu{
+  margin-left: -16px;
+  margin-top: 15px;
+}
+
+.submenu input{
+  height: 30px;
+  border-radius:5px;
+  border: 1px solid #d6d6d6;
+}
+
+.submenu input::placeholder{
+  text-align: center;
+}
+
+.lastCatItem{
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
 }
 
 #slider,

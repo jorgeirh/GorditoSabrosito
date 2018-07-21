@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title>GorditoSabrosito</title>
     <link rel="stylesheet" href="css/styles.css">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:800" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:500,800" rel="stylesheet">
     <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.css">
 
     <link rel="shortcut icon" href="img/icon.png">
@@ -17,24 +17,41 @@
           <img src="img/logo.png" alt="logo">
         </div>
       <div class="menuBar2 menuTransition">
-        <div class="menu1">
+        <div class="menu">
           <ul class="">
             <li>Categoria 1 <i class="fa fa-angle-down arrowRotate"></i>
-              <ul>
+              <ul class="submenu">
                 <li>Categoria 1</li>
                 <li>Categoria 2</li>
-                <li>Categoria 3</li>
+                <li class="lastCatItem">Categoria 3</li>
               </ul>
             </li>
           </ul>
           <ul>
-            <li>Categoria 2 <i class="fa fa-angle-down arrowRotate"></i></li>
+            <li>Categoria 2 <i class="fa fa-angle-down arrowRotate"></i>
+              <ul class="submenu">
+              <li>Categoria 1</li>
+              <li>Categoria 2</li>
+              <li class="lastCatItem">Categoria 3</li>
+            </ul>
+            </li>
           </ul>
           <ul>
-            <li>Categoria 3 <i class="fa fa-angle-down arrowRotate"></i></li>
+            <li>Categoria 3 <i class="fa fa-angle-down arrowRotate"></i>
+            <ul class="submenu">
+              <li>Categoria 1</li>
+              <li>Categoria 2</li>
+              <li class="lastCatItem">Categoria 3</li>
+            </ul>
+            </li>
           </ul>
           <ul>
-            <li>Bienvenido Jorge</li>
+            <li>Inicia Sesión
+              <ul class="submenu">
+                <li><input type="text" name="" value="" placeholder="Usuario"></li>
+                <li class="lastCatItem"><input type="text" name="" value="" placeholder="Contraseña"></li>
+              </ul>
+            </li>
           </ul>
 
         <button class="menuBtn2" type="button" name="button" id="basket"><i class="fa fa-shopping-basket"></i></button>
@@ -64,11 +81,17 @@
       </div>
 
       <div class="placeOrder">
-        <input type="search" value="" id="orderFood" placeholder="Ingresa tu ubicación">
-        <button type="search" id="searchFood"><i class="fa fa-search"></i></button>
+        <input type="search" value="" id="orderFood" placeholder="Ingresa tu ubicación"><button type="search" id="searchFood"><i class="fa fa-search"></i></button>
+      </div>
+
+      <div class="mainTitle">
+        <h2>Promociones del mes</h2>
       </div>
 
       <section class="promos">
+        <article class="promo1">
+          <i class="fa fa-angle-right"></i>
+        </article>
         <article class="promo1">
           <img src="img/rest1.jpg" alt="promo1">
         </article>
