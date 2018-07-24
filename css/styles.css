@@ -68,7 +68,7 @@ header{
 .menu li ul{
   display: none;
   position: absolute;
-  min-width: 140px;
+  width: 140px;
 }
 
 .menu li:hover > ul{
@@ -99,6 +99,7 @@ header li{
   border: none;
   padding:15px;
 }
+
 
 header li:hover {
   background-color: #000 !important;
@@ -133,9 +134,10 @@ input::placeholder{
 
 .placeOrder button{
   font-size: 15px;
+  background-color: #f1f1f1;
   height: 48px;
   width: 50px;
-  border: 1px solid #d6d6d6;
+  border: none;
   border-radius: 5px;
   margin-left: 0;
 }
@@ -161,7 +163,20 @@ input::placeholder{
 .promos img{
   border-radius: 10px;
   box-shadow: 0px 0px  3px rgba(0, 0, 0, 0.9);
+}
+.info{
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+.info article{
+  display: inline-block;
+  margin: 0 auto;
+  width: 300px;
+  height: 200px;
+}
 
+.info1 li{
 
 }
 
@@ -171,11 +186,19 @@ input::placeholder{
 }
 
 .submenu input{
-  height: 30px;
+  padding: 10px;
   border-radius:5px;
   border: 1px solid #d6d6d6;
+  width: 110px;
 }
 
+.submenu button{
+  background-color: #000;
+  color: #fff;
+  border-radius: 5px;
+  font-size: 12px;
+  width: 110px;
+}
 .submenu input::placeholder{
   text-align: center;
 }
