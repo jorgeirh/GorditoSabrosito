@@ -28,7 +28,11 @@ li{
 
 header{
   color: #fff;
-  background-color: #000
+
+}
+
+.accountSign{
+  width: 145px;
 }
 
 .headerBar{
@@ -68,7 +72,7 @@ header{
 .menu li ul{
   display: none;
   position: absolute;
-  width: 140px;
+  width: 145px;
 }
 
 .menu li:hover > ul{
@@ -80,10 +84,18 @@ header{
   float: right;
 }
 
+.menuPrincipal{
+  width: 145px;
+}
+
 .mainTitle h1,
 .mainTitle h2{
   text-align: center;
   margin-top: 60px;
+}
+
+header{
+  top:0;
 }
 
 header ul {
@@ -97,12 +109,17 @@ header li{
   background: none;
   color: #000;
   border: none;
-  padding:15px;
+  padding: 15px;
 }
 
+header .mainMenu li{
+  background: none;
+  color: #000;
+  border: none;
+}
 
-header li:hover {
-  background-color: #000 !important;
+header li:hover:not(.blackHoverRemove) {
+  background-color: #000;
   color: #fff;
   -webkit-transition: all 0.8 ease;
   transition: all 0.8s ease;
@@ -112,7 +129,12 @@ header li a:hover {
 
 }
 
-header button{background-color: #fff; border: none; font-size: 14px; padding: 8px;}
+header button{
+  background-color: #fff;
+  border: none;
+  font-size: 14px;
+  padding: 8px;
+}
 
 input::placeholder{
   color: #c3c3c3
@@ -128,42 +150,91 @@ input::placeholder{
   height: 50px;
   border: 1px solid #d6d6d6;
   border-radius: 5px;
+  border-bottom-right-radius: 0px;
+  border-top-right-radius: 0px;
   text-align: center;
   margin: 0;
+
 }
 
 .placeOrder button{
+  display: inline-flex;
   font-size: 15px;
   background-color: #f1f1f1;
-  height: 48px;
-  width: 50px;
-  border: none;
+  padding: 16px;
+  border: 1px solid #d6d6d6;
+  border-left: none;
   border-radius: 5px;
-  margin-left: 0;
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 0px;
+  align-items: center;
+  text-align: center;
+  margin:0;
 }
 
 .placeOrder{
-  display: block;
-  text-align: center;
+  display: flex;
   margin-top: 20px;
   margin-bottom: 100px;
+  justify-content: center;
+
 }
 
-.promos{
+.orderSection{
+  width: 100%;
+  margin: 0 auto;
+}
+
+.promos1, .promos2{
   display: flex;
   width: 100%;
   justify-content: space-between;
   margin-top: 30px;
 }
 
-.promos article{
+.promos1 article, .promos2 article{
   margin: 0 auto;
-
 }
-.promos img{
+
+.promos1 img, .promos2 img{
   border-radius: 10px;
   box-shadow: 0px 0px  3px rgba(0, 0, 0, 0.9);
 }
+
+.promosContainer .moveLeftCurrent{
+  animation-name: moveLeftCurrent;
+  animation-duration: 0.5s;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+
+.promosContainer .moveLeftNextSlide{
+  animation-name: moveLeftNext;
+  animation-duration: 0.5s;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+
+@keyframes moveLeftCurrent {
+  from{
+    margin-left: 0;
+    opacity: 1;
+  }to{
+    margin-left: -100%;
+    opacity: 1;
+  }
+}
+
+@keyframes moveLeftNext {
+  from{
+    margin-left: 100%;
+    opacity: 1;
+  }to{
+    margin-left: 0;
+    opacity: 1;
+  }
+}
+
 .info{
   display: flex;
   width: 100%;
@@ -181,15 +252,29 @@ input::placeholder{
 }
 
 .submenu{
-  margin-left: -16px;
+  margin-left: -15px;
   margin-top: 15px;
+  width: 145px;
+  text-align: center;
 }
+
 
 .submenu input{
   padding: 10px;
   border-radius:5px;
   border: 1px solid #d6d6d6;
   width: 110px;
+}
+
+.submenu input, .placeOrder input:focus{
+  outline:none;
+}
+
+.placeOrder button:focus{
+  outline:none;
+  background-color: #000;
+  color: #fff;
+  border: 1px solid #fff;
 }
 
 .submenu button{

@@ -9,6 +9,11 @@ function reset(){
   }
 }
 
+setInterval(() => {
+  arrowRight.click();
+}, 5000);
+
+
 //Inicia slider
 function startSlide(){
   reset();
