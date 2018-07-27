@@ -4,8 +4,8 @@ class Slider{
     this.arrowLeft = document.querySelector(`#${sliderId} .arrow-left`);
     this.arrowRight = document.querySelector(`#${sliderId} .arrow-right`);
     this.current = 0;
-    console.log(this.sliderImages);
-  }
+    self = this;
+    }
   reset(){
     for(let i = 0; i < this.sliderImages.length; i++){
       this.sliderImages[i].style.display = 'none';
@@ -21,22 +21,21 @@ class Slider{
     this.sliderImages[0].style.display = 'block';
 
     this.arrowLeft.addEventListener('click', function(){
-      console.log(this, self.sliderImages);
-      if(this.current === 0){
-        this.current = this.sliderImages.length;
+      if(self.current === 0){
+        self.current = self.sliderImages.length;
       }
-      this.slideLeft();
+      self.slideLeft();
     });
 
     this.arrowRight.addEventListener('click', function(){
-      if(this.current === this.sliderImages.length - 1){
-        this.current = -1
+      if(self.current === self.sliderImages.length - 1){
+        self.current = -1
       }
-      this.slideRight();
+      self.slideRight();
     }, false);
 
     setInterval(() => {
-      this.arrowRight.click();
+      self.arrowRight.click();
     }, 5000);
   }
 

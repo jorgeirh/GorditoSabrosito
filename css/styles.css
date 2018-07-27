@@ -342,3 +342,11 @@ input::placeholder{
   right: 0;
   margin-right: 30px;
 }
+
+footer{
+  text-align: center;
+  width: 100%;
+  bottom: 0;
+  height: 30px;
+
+}
