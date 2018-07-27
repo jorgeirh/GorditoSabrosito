@@ -1,51 +1,60 @@
-let sliderImages = document.querySelectorAll('.slide'),
-  arrowLeft = document.querySelector('#arrow-left'),
-  arrowRight = document.querySelector('#arrow-right'),
-  current = 0;
-
-function reset(){
-  for(let i = 0; i < sliderImages.length; i++){
-    sliderImages[i].style.display = 'none';
+class Slider{
+  constructor(sliderId){
+    this.sliderImages = document.querySelectorAll(`#${sliderId} .slide`);
+    this.arrowLeft = document.querySelector(`#${sliderId} .arrow-left`);
+    this.arrowRight = document.querySelector(`#${sliderId} .arrow-right`);
+    this.current = 0;
+    console.log(this.sliderImages);
   }
-}
-
-setInterval(() => {
-  arrowRight.click();
-}, 5000);
-
-
-//Inicia slider
-function startSlide(){
-  reset();
-  sliderImages[0].style.display = 'block';
-}
-
-//Muestra anterior
-function slideLeft(){
-  reset();
-  sliderImages[current - 1].style.display = 'block';
-  current--;
-}
-
-//Muestra Siguiente
-function slideRight() {
-  reset();
-  sliderImages[current + 1].style.display = 'block';
-  current++;
-}
-
-arrowLeft.addEventListener('click', function(){
-  if(current === 0){
-    current = sliderImages.length;
+  reset(){
+    for(let i = 0; i < this.sliderImages.length; i++){
+      this.sliderImages[i].style.display = 'none';
+    }
   }
-  slideLeft();
-});
 
-arrowRight.addEventListener('click', function(){
-  if(current === sliderImages.length - 1){
-    current = -1
+
+
+
+  //Inicia slider
+  startSlide(){
+    this.reset();
+    this.sliderImages[0].style.display = 'block';
+
+    this.arrowLeft.addEventListener('click', function(){
+      console.log(this, self.sliderImages);
+      if(this.current === 0){
+        this.current = this.sliderImages.length;
+      }
+      this.slideLeft();
+    });
+
+    this.arrowRight.addEventListener('click', function(){
+      if(this.current === this.sliderImages.length - 1){
+        this.current = -1
+      }
+      this.slideRight();
+    }, false);
+
+    setInterval(() => {
+      this.arrowRight.click();
+    }, 5000);
   }
-  slideRight();
-});
 
-startSlide();
+  //Muestra anterior
+  slideLeft(){
+    this.reset();
+    this.sliderImages[this.current - 1].style.display = 'block';
+    this.current--;
+  }
+
+  //Muestra Siguiente
+  slideRight() {
+    this.reset();
+    this.sliderImages[this.current + 1].style.display = 'block';
+    this.current++;
+  }
+
+
+}
+let sliderPrincipal = new Slider('sliderPrincipal');
+  sliderPrincipal.startSlide();
