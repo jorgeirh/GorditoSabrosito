@@ -88,11 +88,16 @@ header{
   width: 145px;
 }
 
-.mainTitle h1,
-.mainTitle h2{
+.mainTitle h1{
   text-align: center;
   margin-top: 60px;
 }
+
+ .mainTitle h2{
+   text-align: left;
+   margin-top: 60px;
+   margin-left: 90px;
+ }
 
 header{
   top:0;
@@ -201,46 +206,19 @@ input::placeholder{
 .promos1 img, .promos2 img{
   border-radius: 10px;
   box-shadow: 0px 0px  3px rgba(0, 0, 0, 0.7);
+  width: 95%;
 }
 
-.promosContainer .moveLeftCurrent{
-  animation-name: moveLeftCurrent;
-  animation-duration: 0.5s;
-  animation-timing-function: linear;
-  animation-fill-mode: forwards;
-}
+.restaurantesHead img{
+    width: 100%;
+    text-align: center;
 
-.promosContainer .moveLeftNextSlide{
-  animation-name: moveLeftNext;
-  animation-duration: 0.5s;
-  animation-timing-function: linear;
-  animation-fill-mode: forwards;
-}
-
-@keyframes moveLeftCurrent {
-  from{
-    margin-left: 0;
-    opacity: 1;
-  }to{
-    margin-left: -100%;
-    opacity: 1;
-  }
-}
-
-@keyframes moveLeftNext {
-  from{
-    margin-left: 100%;
-    opacity: 1;
-  }to{
-    margin-left: 0;
-    opacity: 1;
-  }
 }
 
 .info{
-  display: flex;
-  width: 90%;
-  justify-content: space-around;
+  display: inline-flex;
+  width: 100%;
+  justify-content: center;
   margin: 0 auto;
 }
 .info div{
@@ -248,14 +226,14 @@ input::placeholder{
 }
 
 .info .infoText{
-  width: 350px;
-  font-size: 13px;
+  width: 250px;
+  font-size: 14px;
+  margin-right: 50px;
 }
 
 .info .infoIcon{
-  font-size: 30px;
-  margin-top: 6px;
-  margin-right: 15px;
+  font-size: 40px;
+  margin-right: 20px;
 }
 
 .info li{
@@ -359,16 +337,40 @@ footer{
   width: 100%;
   margin-top: 50px;
   bottom: 0;
-  height: 50px;
-  font-size: 12px;
+  height: 40px;
+  font-size: 10px;
 }
 footer span{
   position: absolute;
-  margin-top: 17px;
+  margin-top: 14px;
+}
+@keyframes moveLeftCurrent {
+  from{
+    margin-left: 0;
+    opacity: 1;
+  }to{
+    margin-left: -100%;
+    opacity: 1;
+  }
 }
 
-@@media 767px {
-  .menuBar2 ul{
-    display: none;
+@keyframes moveLeftNext {
+  from{
+    margin-left: 100%;
+    opacity: 1;
+  }to{
+    margin-left: 0;
+    opacity: 1;
+  }
+}
+
+@media (max-width: 769px) {
+  .menu ul {
+    flex-direction: column;
+    display: grid;
+    position: relative;
+    top: 6px;
+    left: 0px;
+    float: left;
   }
 }
