@@ -14,22 +14,23 @@
     <header>
       <div class="headerBar">
         <div class="menuBar">
-          <button class="menuBtn" type="button" name="button" id="menu"><i class="fa fa-bars"></i></button>
-          <img src="img/logo.png" alt="logo">
+          <button class="menuBtn" type="button" name="slideMenuOpen" onclick="openSlideMenu()"><i class="fa fa-bars"></i></button>
+          <a href="index.html"><img src="img/logo.png" alt="logo"></a>
         </div>
+
       <div class="menuBar2 menuTransition">
         <div class="menu">
           <ul>
-            <li class="menuPrincipal">Restaurantes <i class="fa fa-angle-down arrowRotate"></i>
+            <li class="menuPrincipal"><a href="restaurantes.html">Restaurantes <i class="fa fa-angle-down arrowRotate"></i></a>
               <ul class="submenu">
-                <li>Categoria 1 </li>
-                <li>Categoria 2 </li>
-                <li class="lastCatItem">Categoria 3 </li>
+                <li>Asiatica </li>
+                <li>Italiana </li>
+                <li class="lastCatItem">Postres </li>
               </ul>
             </li>
           </ul>
           <ul>
-            <li class="menuPrincipal">Comida Rápida <i class="fa fa-angle-down arrowRotate"></i>
+            <li class="menuPrincipal"><a href="restaurantes.html">Comida Rápida <i class="fa fa-angle-down arrowRotate"></i></a>
               <ul class="submenu">
               <li>Categoria 1 </li>
               <li>Categoria 2 </li>
@@ -38,7 +39,7 @@
             </li>
           </ul>
           <ul>
-            <li class="menuPrincipal">SuperMercado <i class="fa fa-angle-down arrowRotate"></i>
+            <li class="menuPrincipal"><a href="restaurantes.html">SuperMercado <i class="fa fa-angle-down arrowRotate"></i></a>
             <ul class="submenu">
               <li>Categoria 1</li>
               <li>Categoria 2</li>
@@ -47,11 +48,11 @@
             </li>
           </ul>
           <ul>
-            <li class="accountSign">Inicia Sesión
+            <li class="accountSign"><a>Inicia Sesión</a>
               <ul class="submenu">
                 <li class="blackHoverRemove"><input type="text" name="" value="" placeholder="Usuario"></li>
                 <li class="blackHoverRemove"><input type="password" name="" value="" placeholder="Contraseña"></li>
-                <li class="lastCatItem blackHoverRemove"><button type="submit" name="button">Iniciar Sesión</button></li>
+                <li class="lastCatItem blackHoverRemove"><button type="submit" name="button">Iniciar Sesión</button><a href="login.html" class="newUser">Registrarse</a></li>
               </ul>
             </li>
           </ul>
@@ -61,6 +62,21 @@
       </div>
       </div>
     </header>
+
+<nav>
+  <div class="contentSlideMenu">
+
+    <div id="slideMenu" class="navMenu">
+      <button class="closeMenu" type="" name="slideMenuClose" onclick="closeSlideMenu()"><i class="fa fa-times"></i></button>
+      <ul>
+        <li>Restaurantes</li>
+        <li>Comida Rapida</li>
+        <li>SuperMercado</li>
+      </ul>
+    </div>
+  </div>
+
+</nav>
 
       <div id="sliderPrincipal" class="slider">
         <div class="arrow arrow-left"><i class="fa fa-angle-left"></i></div>
@@ -96,13 +112,15 @@
         </div>
 
         <div class="infoText">
-          <p>Haz el pedido de tus antojos favoritos con un solo click en donde estés. </p>
+          <h4>Entregamos en tus manos</h4>
+          <p>Haz el pedido de tus antojos favoritos en donde estés. </p>
         </div>
         <div class="infoIcon">
           <i class="far fa-heart"></i>
         </div>
 
         <div class="infoText">
+          <h4>Amamos la comida como tu</h4>
           <p>Cuidamos tus pedidos sabrositos con amor para consentirte.</p>
         </div>
 
@@ -111,17 +129,18 @@
         </div>
 
         <div class="infoText">
+          <h4>Queremos que seas feliz</h4>
           <p>Disfruta de tus restaurantes favoritos y con la mejor calidad.</p>
         </div>
 
       </section>
 
-      <div class="mainTitle">
-        <h2>Promociones del mes</h2>
-      </div>
 
+      <!-- Lista de promos -->
       <div class="promosContainer">
-
+        <div class="mainTitle">
+          <h2>Promociones del mes</h2>
+        </div>
         <div class="promos1">
 
           <article class="promo1">
@@ -150,12 +169,57 @@
 
         </div>
 
+
+
       </div>
-    <footer>
-      <span>GorditoSabrosito 2018</span>
-    </footer>
+
+<!-- Lista de super -->
+      <div class="promosContainer">
+        <div class="mainTitle">
+          <h2>Elige tus productos del super</h2>
+        </div>
+        <div class="marketList">
+
+          <article class="promo1">
+            <img src="img/rest1.jpg" alt="promo1">
+          </article>
+          <article class="promo2">
+            <img src="img/rest2.jpg" alt="promo3">
+          </article>
+          <article class="promo3">
+            <img src="img/rest1.jpg" alt="promo3">
+          </article>
+
+        </div>
+
+        <div class="promos2">
+
+          <article class="promo1">
+            <img src="img/rest2.jpg" alt="promo1">
+          </article>
+          <article class="promo2">
+            <img src="img/rest1.jpg" alt="promo3">
+          </article>
+          <article class="promo3">
+            <img src="img/rest1.jpg" alt="promo3">
+          </article>
+
+        </div>
+
+
+
+      </div>
+
+      <div>
+      </div>
+      <footer>
+        <span>GorditoSabrosito 2018</span>
+      </footer>
+  <script src="js/fetch.js"></script>
+  <script src="js/slideMenu.js"></script>
   <script src="js/slider.js"></script>
   <script src="js/maps.js"></script>
 <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAFg-BUjQ2cd56vFlJEUyHqqXsYkrPL4vU&libraries=places&callback=activatePlacesSearch"></script>
   </body>
+
 </html>
