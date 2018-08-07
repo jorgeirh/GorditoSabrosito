@@ -31,16 +31,16 @@ async function renderRestaurants() {
     let articleNode = document.querySelector('#restaurantList article');
     articleNode.remove();
 
-    restaurant.forEach((product) => {
+    restaurants.forEach((restaurant) => {
         let newArticle = articleNode.cloneNode(true);
-        newArticle.children[0].src = 'img/' + .photo;
-        newArticle.children[1].children[0].innerText = product.name;
-        newArticle.children[1].children[1].innerText = product.tag;
-        newArticle.children[1].children[2].innerText = product.hour;
-        newArticle.children[1].children[4].innerText = product.shipprice;
-
+        newArticle.children[0].src = 'img/' + restaurant.photo;
+        newArticle.children[1].children[0].innerText = restaurant.name;
+        newArticle.children[1].children[1].innerText = restaurant.tag;
+        newArticle.children[1].children[2].innerText = restaurant.hour;
+        newArticle.children[1].children[3].innerText = 'Envio $' + restaurant.ship;
         restaurantsNode.appendChild(newArticle);
-    });
+    }
+  );
 }
 
 

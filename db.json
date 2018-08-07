@@ -13,7 +13,23 @@
       "name":"Bostons Pizza",
       "tag": "Comida italiana",
       "hour":"12 - 10:30",
-      "shipprice": 30
+      "ship": 20
+},
+{
+      "id": 2,
+      "photo":"rest1.jpg",
+      "name":"Bravo Butchers",
+      "tag": "Carnes y Cortes",
+      "hour":"12 - 10:30",
+      "ship": 30
+},
+{
+      "id": 3,
+      "photo":"rest2.jpg",
+      "name":"Bravo Butchers",
+      "tag": "Carnes y Cortes",
+      "hour":"12 - 10:30",
+      "ship": 30
     }
   ],
   "promos": {
