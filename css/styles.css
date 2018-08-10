@@ -161,6 +161,9 @@ header{
   font-size: 13px;
   margin-right: 15px;
   margin-bottom: 15px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 .restauranteBox p{
   font-size: 11px;
@@ -271,6 +274,7 @@ header li a:link,header li a:visited{
   -webkit-transition: all 0.8 ease;
   -moz-transition: all 0.8 ease;
   transition: all 0.8s ease;
+  cursor: pointer;
 }
 .registerInputs .btn-fb:hover {
   background-color: #334f88;
@@ -336,12 +340,33 @@ input::placeholder{
   width: 100%;
   margin: 0 auto;
 }
+.precioProducto{
+  font-size: 16px;
+}
+.nombreProducto{
+  font-size: 12px;
+  color: #7d7d7d;
+}
 
+.precioProducto, .nombreProducto{
+  display: block;
+  text-align: left;
+}
+.productoInfo{
+  position: relative;
+  margin: 0 auto;
+  width: 180px;
+  top: -25px;
+}
+.productoInfo p{
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
 .promos1,
 .promos2{
-  display: flex;
+  display: inline-flex;
   width: 100%;
-  justify-content: space-between;
   margin-top: 30px;
 }
 
@@ -360,7 +385,8 @@ input::placeholder{
 .promosSuper{
   display: flex;
   width: 100%;
-  margin-top: 30px;
+  margin-top: 60px;
+  margin-bottom: 50px;
 }
 
 .promosSuper img{
@@ -380,8 +406,8 @@ input::placeholder{
 .promosSuper button{
   position: relative;
   display: block;
-  width: 120px;
-  background-color: rgba(230, 55, 55, 0.9);
+  width: 170px;
+  background-color: rgba(230, 55, 55);
   border-radius: 5px;
   color: #fff;
   padding: 10px;
@@ -399,6 +425,9 @@ input::placeholder{
   width: 100%;
   margin: 0 auto;
   display: block;
+}
+.promosContainer article{
+  margin: 0 auto;
 }
 .restaurantesGlobal{
     display: inline-flex;
@@ -556,12 +585,41 @@ input::placeholder{
 .submenu input::placeholder{
   text-align: center;
 }
-
+.subCategoryMenu{
+  font-size: 14px;
+  font-weight: normal;
+  margin-left: 15px;
+  cursor: pointer;
+}
 .lastCatItem{
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
 }
 
+.values{
+  display: inline-flex;
+  padding: 60px;
+  color: #fff;
+  font-size: 12px;
+  background-color: #232323;
+  border-radius: 10px;
+}
+.bigIcon{
+  font-size: 50px;
+}
+.valueText{
+  width: 180px;
+  margin-right: 20px;
+}
+.gorditoValues{
+  display: inline-flex;
+  width: 100%;
+  margin-top: 30px;
+  margin-bottom: 100px;
+}
+.gorditoValues article{
+  margin: 10px auto;
+}
 .slider,
 .wrap,
 .slide-content{
@@ -673,4 +731,9 @@ footer span{
 .promos1 img, .promos2 img{
   margin: 15px;
 }
+.promosSuper, .gorditoValues{
+  flex-wrap: wrap;
+
+}
+
 }

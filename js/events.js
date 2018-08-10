@@ -1,23 +1,23 @@
-//Obtener el formulario
-// (function register() {
-//   const formNode = document.getElementById('register-form');
-//
-//   formNode.addEventListener('submit', function(e){
-//     e.preventDefault();
-//
-//     const nameNode = document.getElementById('name');
-//     const emailNode = document.getElementById('email');
-//     const passwordNode = document.getElementById('password');
-//
-//     data = {
-//       name: nameNode.value,
-//       email: emailNode.value,
-//       password: passwordNode.value,
-//     };
-//
-//     console.log(data);
-//   });
-// })();
+Obtener el formulario
+(function register() {
+  const formNode = document.getElementById('register-form');
+
+  formNode.addEventListener('submit', function(e){
+    e.preventDefault();
+
+    const nameNode = document.getElementById('name');
+    const emailNode = document.getElementById('email');
+    const passwordNode = document.getElementById('password');
+
+    data = {
+      name: nameNode.value,
+      email: emailNode.value,
+      password: passwordNode.value,
+    };
+
+    console.log(data);
+  });
+})();
 
 //Agregar a la canasta
 (function addBasket() {
