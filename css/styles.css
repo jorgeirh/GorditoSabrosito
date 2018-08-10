@@ -274,6 +274,7 @@ header li a:link,header li a:visited{
   -webkit-transition: all 0.8 ease;
   -moz-transition: all 0.8 ease;
   transition: all 0.8s ease;
+  cursor: pointer;
 }
 .registerInputs .btn-fb:hover {
   background-color: #334f88;
@@ -584,7 +585,12 @@ input::placeholder{
 .submenu input::placeholder{
   text-align: center;
 }
-
+.subCategoryMenu{
+  font-size: 14px;
+  font-weight: normal;
+  margin-left: 15px;
+  cursor: pointer;
+}
 .lastCatItem{
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
