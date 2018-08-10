@@ -3,18 +3,19 @@
   padding: 0;
   box-sizing: border-box;
 }
-
-:root{
-  --background-color: #000;
+a{
+  color: #000;
+  text-decoration: none;
 }
-
 ul{
   font-weight: 800;
 }
 .arrowRotate:hover{
   -webkit-transform: rotate(-90deg);
+  -moz-transform: rotate(-90deg);
   transform: rotate(-90deg);
   -webkit-transition: all 0.9 ease;
+  -moz-transition: all 0.9 ease;
   transition: all 0.9 ease;
 }
 
@@ -26,21 +27,27 @@ li{
   font-family: 'Montserrat', sans-serif;
 }
 
+body button:focus{
+  outline: none;
+}
 header{
   color: #fff;
-
+  top:0;
 }
 
 .accountSign{
+  text-align: center;
   width: 145px;
 }
 
 .headerBar{
   width: 100%;
-  height: 50px;
+  height: 49px;
   position: fixed;
   top:0;
   background-color: #fff;
+  border-bottom: 1px solid #e5edef;
+  z-index: 1;
 }
 
 .menuBar img {
@@ -60,9 +67,8 @@ header{
 }
 
 .menu li {
-  background-color: #fff;
-}
-
+  text-align: center;
+  cursor: pointer;
 }
 
 .menu > li ul li{
@@ -75,6 +81,21 @@ header{
   width: 145px;
 }
 
+.menu .botonInicio{
+  margin-top: 10px;
+  font-size: 12px;
+  font-weight: bold;
+  color: #484848;
+  padding: 5px 30px;
+  float: right;
+}
+.botonInicio{
+  border-radius: 5px;
+  padding: 10px;
+  border: 1px solid #484848;
+
+}
+
 .menu li:hover > ul{
   display: block;
 }
@@ -83,19 +104,118 @@ header{
   margin-right: 20px;
   float: right;
 }
+.menuBtn{
+  visibility: hidden;
 
+}
+.menuBtn2 div{
+  background-color: #e63838;
+  border-radius: 100%;
+  position: relative;
+  width: 15px;
+  height: 15px;
+  top: -11px;
+  right: 11px;
+  color: #fff;
+  padding: 3px;
+  font-size: 7px;
+  display: inline-block;
+
+}
+.navMenu{
+  display: none;
+}
 .menuPrincipal{
   width: 145px;
 }
+.menuRestaurantes{
+  position: sticky;
+  left: 0;
+  top:40px;
+  width:250px;
+  height: 700px;
+  background-color: #fff;
+  margin-top: 49px;
+  padding-top: 20px;
+}
+.menuRestaurantes h2{
+  font-size: 20px;
+  display: block;
+  padding: 11px 20px;
+}
+.menuRestaurantes li{
+  display: block;
+  padding: 11px 20px;
+  font-size: 14px;
+}
+.menuRestaurantes a:hover{
+  color: #636363;
+}
+.restauranteBox{
+  width: 100%;
+  max-width: 330px;
+  height: 90px;
+  display: inline-flex;
+  border-radius: 5px;
+  background-color: #fff;
+  font-size: 13px;
+  margin-right: 15px;
+  margin-bottom: 15px;
+}
+.restauranteBox p{
+  font-size: 11px;
+  color: #828282;
+}
 
-.mainTitle h1,
-.mainTitle h2{
+.restauranteBox img{
+  width: 140px;
+  border-radius: 5px;
+  box-shadow: 0px 0px  3px rgba(0, 0, 0, 0.2);
+}
+.restauranteBox:hover{
+  box-shadow: 0px 0px  3px rgba(220, 220, 220, 0.8);
+}
+.restauranteInfo{
+  margin-left: 10px;
+  margin-top: 10px;
+}
+.restauranteInfo span{
+  display: block;
+  position: relative;
+  font-size: 11px;
+}
+.priceHour{
+  display: inline-block;
+}
+
+.gridRestaurantes{
+  padding-top: 70px;
+  padding-left: 30px;
+  width: calc(100% - 250px);
+  height: auto;
+  background-color: #f7f7f7;
+}
+.mainTitle h1{
   text-align: center;
   margin-top: 60px;
 }
 
-header{
-  top:0;
+ .mainTitle h2{
+   text-align: left;
+   margin-top: 60px;
+   margin-left: 50px;
+ }
+
+.newUser{
+  display: block;
+  margin-top: 8px;
+  margin-bottom: 5px;
+  color: #000;
+}
+
+.newUser:hover{
+  text-decoration: underline;
+
 }
 
 header ul {
@@ -104,14 +224,14 @@ header ul {
   margin-right: 20px;
   height:50px;
   font-size: 12px;
-  text-align: center;
+
 }
 
 header li{
   background: none;
   color: #000;
   border: none;
-  padding: 15px;
+  padding: 17px;
 }
 
 header .mainMenu li{
@@ -120,22 +240,53 @@ header .mainMenu li{
   border: none;
 }
 
-header li:hover:not(.blackHoverRemove) {
+}
+header li a:link,header li a:visited{
+  color: #000;
+
+}
+
+.menu li:hover:not(.blackHoverRemove) a:not(.newUser) {
+  color: #fff;
+}
+.menu li:hover:not(.blackHoverRemove) {
   background-color: #000;
   color: #fff;
   -webkit-transition: all 0.8 ease;
+  -moz-transition: all 0.8 ease;
   transition: all 0.8s ease;
 }
-header li a:hover {
+.botonInicio:hover {
+  background-color: #000;
   color: #fff;
-
+  -webkit-transition: all 0.8 ease;
+  -moz-transition: all 0.8 ease;
+  transition: all 0.8s ease;
+}
+.forgotPassword:hover{
+  text-decoration: underline;
+}
+.btn-signin:hover{
+  background-color: #484848;
+  -webkit-transition: all 0.8 ease;
+  -moz-transition: all 0.8 ease;
+  transition: all 0.8s ease;
+}
+.registerInputs .btn-fb:hover {
+  background-color: #334f88;
+  color: #fff;
+  cursor: pointer;
+  -webkit-transition: all 0.8 ease;
+  -moz-transition: all 0.8 ease;
+  transition: all 0.8s ease;
+}
+header li a:hover:not(.newUser) {
+  color: #fff;
 }
 
 header button{
-  background-color: #fff;
   border: none;
-  font-size: 14px;
-  padding: 8px;
+  font-size: 19px;
 }
 
 input::placeholder{
@@ -144,7 +295,6 @@ input::placeholder{
 
 .slider{
   width: 100%;
-
 }
 
 .placeOrder input{
@@ -187,91 +337,192 @@ input::placeholder{
   margin: 0 auto;
 }
 
-.promos1, .promos2{
+.promos1,
+.promos2{
   display: flex;
   width: 100%;
   justify-content: space-between;
   margin-top: 30px;
 }
 
-.promos1 article, .promos2 article{
-  margin: 0 auto;
+.promos1 article,
+.promos2 article{;
+  margin-left: 50px;
 }
 
-.promos1 img, .promos2 img{
+.promos1 img,
+.promos2 img{
   border-radius: 10px;
   box-shadow: 0px 0px  3px rgba(0, 0, 0, 0.7);
+  width: 95%;
 }
 
-.promosContainer .moveLeftCurrent{
-  animation-name: moveLeftCurrent;
-  animation-duration: 0.5s;
-  animation-timing-function: linear;
-  animation-fill-mode: forwards;
+.promosSuper{
+  display: flex;
+  width: 100%;
+  margin-top: 30px;
 }
 
-.promosContainer .moveLeftNextSlide{
-  animation-name: moveLeftNext;
-  animation-duration: 0.5s;
-  animation-timing-function: linear;
-  animation-fill-mode: forwards;
+.promosSuper img{
+  display: block;
+  margin: 0 auto;
+  max-height: 140px;
+}
+.promosSuper img:hover + button,
+.promosSuper button:hover{
+  display: block;
+  visibility: visible;
+  transition: 0.7s;
+  -webkit-transition: 0.7s;
+
 }
 
-@keyframes moveLeftCurrent {
-  from{
-    margin-left: 0;
-    opacity: 1;
-  }to{
-    margin-left: -100%;
-    opacity: 1;
-  }
+.promosSuper button{
+  position: relative;
+  display: block;
+  width: 120px;
+  background-color: rgba(230, 55, 55, 0.9);
+  border-radius: 5px;
+  color: #fff;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 12px;
+  bottom: 35px;
+  border: none;
+  visibility: hidden;
+  margin: 0 auto;
+  box-shadow: 0px -15px  50px rgba(255, 255, 255);
 }
 
-@keyframes moveLeftNext {
-  from{
-    margin-left: 100%;
-    opacity: 1;
-  }to{
-    margin-left: 0;
-    opacity: 1;
-  }
+
+.promosSuper article{
+  width: 100%;
+  margin: 0 auto;
+  display: block;
+}
+.restaurantesGlobal{
+    display: inline-flex;
+    width: 100%;
+}
+.restaurantesList{
+  display: block;
+  width: 100%;
+  justify-content: flex-start;
+  margin-top: 20px;
 }
 
 .info{
   display: flex;
-  width: 90%;
-  justify-content: space-around;
+  width: 100%;
+  justify-content: center;
   margin: 0 auto;
 }
-.info div{
-
+.infoBox{
+  display: inline-flex;
+  margin-right: 40px;
 }
 
 .info .infoText{
-  width: 350px;
-  font-size: 13px;
+  width: 250px;
+  font-size: 14px;
 }
 
 .info .infoIcon{
-  font-size: 30px;
-  margin-top: 6px;
-  margin-right: 15px;
+  font-size: 40px;
+  margin-right: 20px;
 }
 
 .info li{
   display: inline-flex;
 }
+.forgotPassword{
+  float: right;
+  font-size: 12px;
+  color: #000;
+  padding: 10px 0;
+  margin: 0;
+  position: relative;
+
+}
+.registerContainer{
+  background: #f6f6f6;
+  height: 750px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.registerBlock{
+  width: 100%;
+  max-width: 410px;
+  background-color: #fff;
+  display: block;
+  text-align: center;
+  padding: 30px;
+  box-shadow: 0px 0px  4px rgba(240, 240, 240, 0.9);
+}
+.registerBlock .backHome{
+  float: left;
+  font-size: 12px;
+  color: #000;
+}
+.registerBlock form input{
+  margin-top: 10px;
+  padding: 12px;
+  border-radius: 5px;
+  border: 1px solid #e4e4e4;
+  display: block;
+  width: 100%;
+  text-align: center;
+}
+.registerBlock .btn-fb{
+  background-color: #4267b2;
+  padding: 12px;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 12px;
+  font-weight: bold;
+  width: 100%;
+  border: none;
+}
+.registerInputs{
+  width: 80%;
+  margin: 0 auto;
+}
+.registerInputs form{
+  margin-top: 5px;
+}
+.registerInputs form button{
+  background-color: #191919;
+  border-radius: 5px;
+  padding: 7px;
+  color: #fff;
+  width: 100%;
+  padding: 12px;
+  margin-top: 8px;
+  border: none;
+}
+.registerTitle p, .registerTitle h5{
+  margin-bottom: 13px;
+}
+.registerTitle h5{
+  margin-top: 30px;
+  font-size: 18px;
+}
+.registerTitle p{
+  font-size: 12px;
+}
 
 .submenu{
-  margin-left: -15px;
-  margin-top: 15px;
+  margin-left: -17px;
+  margin-top: 17px;
   width: 145px;
   text-align: center;
 }
 
 
 .submenu input{
-  padding: 10px;
+  padding: 8px;
   border-radius:5px;
   border: 1px solid #d6d6d6;
   width: 110px;
@@ -281,11 +532,11 @@ input::placeholder{
   outline:none;
 }
 
-.placeOrder button:focus{
+.placeOrder button:hover:focus{
   outline:none;
   background-color: #000;
   color: #fff;
-  border: 1px solid #fff;
+  border: 1px solid #000;
 }
 
 .submenu button{
@@ -294,7 +545,14 @@ input::placeholder{
   border-radius: 5px;
   font-size: 12px;
   width: 110px;
+  padding: 10px;
 }
+.submenu li{
+  text-align: center;
+  background-color: #fff;
+  padding: 10px;
+}
+
 .submenu input::placeholder{
   text-align: center;
 }
@@ -311,7 +569,6 @@ input::placeholder{
   padding:0;
   width: 100%;
   height: 400px;
-
 }
 
 .wrap{
@@ -336,7 +593,7 @@ input::placeholder{
 .arrow{
   cursor: pointer;
   position: absolute;
-  top: 190px;
+  top: 220px;
   margin-top: 0px;
   width: 0;
   height: 0;
@@ -354,21 +611,66 @@ input::placeholder{
 }
 
 footer{
+  border-top: 1px solid #f7f7f7;
   text-align: center;
-  background-color: #e8e8e8;
+  background-color: #fff;
   width: 100%;
-  margin-top: 50px;
   bottom: 0;
-  height: 50px;
-  font-size: 12px;
+  height: 40px;
+  font-size: 10px;
 }
 footer span{
   position: absolute;
-  margin-top: 17px;
+  margin-top: 14px;
 }
-
-@@media 767px {
-  .menuBar2 ul{
-    display: none;
+@media (max-width: 878px) {
+  .menuBar2 {
+    visibility: hidden;
   }
+
+  .menuBtn{
+    visibility: visible;
+  }
+  .navMenu{
+    display:block;
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    background-color: #fff;
+    overflow-x: hidden;
+    transition: 0.7s;
+    -webkit-transition: 0.7s;
+    -moz-transition: 0.7s;
+    color: #000;
+    visibility: visible;
+  }
+  .navMenu li, .navMenu button{
+    margin-left: 20px;
+    margin-bottom: 10px;
+    list-style-type: none;
+  }
+  .navMenu button{
+    font-size: 20px;
+    background: none;
+    border: none;
+  }
+.arrow-left, .arrow-right{
+    visibility: hidden;
+  }
+.info{
+  width: 80%;
+  flex-wrap: wrap;
+}
+.infoBox{
+  padding: 25px;
+}
+.promos1, .promos2{
+  width: 80%;
+  flex-wrap: wrap;
+}
+.promos1 img, .promos2 img{
+  margin: 15px;
+}
 }

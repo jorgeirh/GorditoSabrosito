@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Restaurantes</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:500,800" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+  <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.css">
+
+  <link rel="shortcut icon" href="img/icon.png">
+</head>
+
+<body>
+  <header>
+    <div class="headerBar">
+      <div class="menuBar">
+        <button class="menuBtn" type="button" name="button" id="menu"><i class="fa fa-bars"></i></button>
+        <a href="index.html"><img src="img/logo.png" alt="logo"></a>
+      </div>
+      <div class="menuBar2">
+        <div class="menu">
+          <ul>
+            <li class="menuPrincipal"><a href="restaurantes.html">Restaurantes <i class="fa fa-angle-down arrowRotate"></i></a>
+              <ul class="submenu">
+                <li>Asiatica </li>
+                <li>Italiana </li>
+                <li class="lastCatItem">Postres </li>
+              </ul>
+            </li>
+          </ul>
+          <ul>
+            <li class="menuPrincipal"><a href="restaurantes.html">Comida Rápida <i class="fa fa-angle-down arrowRotate"></i></a>
+              <ul class="submenu">
+              <li>Categoria 1 </li>
+              <li>Categoria 2 </li>
+              <li class="lastCatItem">Categoria 3 </li>
+            </ul>
+            </li>
+          </ul>
+          <ul>
+            <li class="menuPrincipal"><a href="restaurantes.html">SuperMercado <i class="fa fa-angle-down arrowRotate"></i></a>
+            <ul class="submenu">
+              <li>Categoria 1</li>
+              <li>Categoria 2</li>
+              <li class="lastCatItem">Categoria 3 </li>
+            </ul>
+            </li>
+          </ul>
+          <ul>
+            <li class="accountSign"><a>Inicia Sesión</a>
+              <ul class="submenu">
+                <li class="blackHoverRemove"><input type="text" name="" value="" placeholder="Usuario"></li>
+                <li class="blackHoverRemove"><input type="password" name="" value="" placeholder="Contraseña"></li>
+                <li class="lastCatItem blackHoverRemove"><button type="submit" name="button">Iniciar Sesión</button><a href="login.html" class="newUser">Registrarse</a></li>
+              </ul>
+            </li>
+          </ul>
+
+        <button class="menuBtn2" type="button" name="button" id="basket"><i class="fa fa-shopping-basket"></i></button>
+        </div>
+      </div>
+    </div>
+  </header>
+  <div class="restaurantesGlobal">
+    <aside class="menuRestaurantes">
+      <h2>Categorias</h2>
+      <ul>
+        <li>
+          <a href="#" id="promociones">
+            <p>Promociones</p>
+          </a>
+        </li>
+        <li>
+          <a href="#" id="envio-gratis">
+            <p>Envio Gratis</p>
+          </a>
+        </li>
+        <li>
+          <a href="#" id="mexicana">
+            <p>Mexicana</p>
+          </a>
+        </li>
+        <li>
+          <a href="#" id="hamburguesas">
+            <p>Hamburguesas</p>
+          </a>
+        </li>
+        <li>
+          <a href="#" id="hotdogs">
+            <p>Hot Dogs</p>
+          </a>
+        </li>
+        <li>
+          <a href="#" id="pizza">
+            <p>Pizza</p>
+          </a>
+        </li>
+        <li>
+          <a href="#" id="comidachina">
+            <p>Comida China</p>
+          </a>
+        </li>
+        <li>
+          <a href="#" id="japonesa-sushi">
+            <p>Japonesa y Sushi</p>
+          </a>
+        </li>
+        <li>
+          <a href="#" id="cafe">
+            <p>Café</p>
+          </a>
+        </li>
+        <li>
+          <a href="#" id="postres">
+            <p>Postres</p>
+          </a>
+        </li>
+        <li>
+          <a href="#" id="mariscos">
+            <p>Mariscos</p>
+          </a>
+        </li>
+      </ul>
+    </aside>
+    <div class="gridRestaurantes">
+      <!-- Lista de super -->
+
+      <h2>Escoge tu restaurante</h2>
+
+      <div class="restaurantesList" id="restaurantList">
+
+        <article class="restauranteBox">
+          <img src="img" alt="promo1">
+          <div class="restauranteInfo">
+            <h3></h3>
+            <p></p>
+            <span>Horario</span>
+            <span></span>
+          </div>
+        </article>
+    </div>
+  </div>
+</div>
+
+
+
+  <footer>
+    <span>GorditoSabrosito 2018</span>
+  </footer>
+
+  <script src="js/fetch.js"></script>
+</body>
+
+</html>
