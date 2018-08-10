@@ -42,7 +42,7 @@ async function renderRestaurants() {
         newArticle.children[0].src = restaurant.img_url;
         newArticle.children[1].children[0].innerText = restaurant.name;
         newArticle.children[1].children[1].innerText = restaurant.category;
-        newArticle.children[1].children[2].innerText = '';
+        newArticle.children[1].children[2].innerText = restaurant.service_hours;
         newArticle.children[1].children[3].innerText = 'Envio $' + restaurant.delivery_cost;
         restaurantsNode.appendChild(newArticle);
     }

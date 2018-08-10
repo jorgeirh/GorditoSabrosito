@@ -9,5 +9,5 @@ function activatePlacesSearch() {
    window.lat = place.geometry.location.lat()
    window.lng = place.geometry.location.lng();
 
-   window.location.href = '/restaurantes.html';
+   window.location.href = 'file:///Users/jorgerosas/dev/Proyecto-Centraal/restaurantes.html';
  }
