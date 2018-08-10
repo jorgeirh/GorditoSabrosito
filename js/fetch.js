@@ -1,7 +1,7 @@
 async function getRestaurants(){
     // Enviar la informacion al API
     const reqRestaurants = new Request(
-        'http://localhost:3000/restaurants', // Cambiar por tu propia API
+        'https://whispering-island-74129.herokuapp.com/near_restaurants', // Cambiar por tu propia API
         {
             method: 'GET'
         }
@@ -33,11 +33,11 @@ async function renderRestaurants() {
 
     restaurants.forEach((restaurant) => {
         let newArticle = articleNode.cloneNode(true);
-        newArticle.children[0].src = 'img/' + restaurant.photo;
+        newArticle.children[0].src = restaurant.img_url;
         newArticle.children[1].children[0].innerText = restaurant.name;
-        newArticle.children[1].children[1].innerText = restaurant.tag;
+        newArticle.children[1].children[1].innerText = restaurant.category;
         newArticle.children[1].children[2].innerText = restaurant.hour;
-        newArticle.children[1].children[3].innerText = 'Envio $' + restaurant.ship;
+        newArticle.children[1].children[3].innerText = 'Envio $' + restaurant.delivery_cost;
         restaurantsNode.appendChild(newArticle);
     }
   );
