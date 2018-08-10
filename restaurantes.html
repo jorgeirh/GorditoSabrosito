@@ -16,54 +16,57 @@
   <header>
     <div class="headerBar">
       <div class="menuBar">
-        <button class="menuBtn" type="button" name="button" id="menu"><i class="fa fa-bars"></i></button>
+        <button class="menuBtn" type="button" name="slideMenuOpen" onclick="openSlideMenu()"><i class="fa fa-bars"></i></button>
         <a href="index.html"><img src="img/logo.png" alt="logo"></a>
       </div>
-      <div class="menuBar2">
+
+      <div class="menuBar2 menuTransition">
         <div class="menu">
           <ul>
-            <li class="menuPrincipal"><a href="restaurantes.html">Restaurantes <i class="fa fa-angle-down arrowRotate"></i></a>
+            <li class="menuPrincipal"><a class="headRest" href="restaurantes.html">Restaurantes <i class="fa fa-angle-down arrowRotate"></i></a>
               <ul class="submenu">
-                <li>Asiatica </li>
-                <li>Italiana </li>
-                <li class="lastCatItem">Postres </li>
+                <li>Mexicana </li>
+                <li>Sushi </li>
+                <li class="lastCatItem">Mariscos </li>
               </ul>
             </li>
           </ul>
           <ul>
             <li class="menuPrincipal"><a href="restaurantes.html">Comida Rápida <i class="fa fa-angle-down arrowRotate"></i></a>
               <ul class="submenu">
-              <li>Categoria 1 </li>
-              <li>Categoria 2 </li>
-              <li class="lastCatItem">Categoria 3 </li>
-            </ul>
+                <li>Hamburguesas </li>
+                <li>Hot Dogs </li>
+                <li class="lastCatItem">Mariscos </li>
+              </ul>
             </li>
           </ul>
           <ul>
             <li class="menuPrincipal"><a href="restaurantes.html">SuperMercado <i class="fa fa-angle-down arrowRotate"></i></a>
-            <ul class="submenu">
-              <li>Categoria 1</li>
-              <li>Categoria 2</li>
-              <li class="lastCatItem">Categoria 3 </li>
-            </ul>
+              <ul class="submenu">
+                <li>Super</li>
+                <li>Tiendita</li>
+                <li class="lastCatItem">Licores </li>
+              </ul>
             </li>
           </ul>
           <ul>
             <li class="accountSign"><a>Inicia Sesión</a>
               <ul class="submenu">
-                <li class="blackHoverRemove"><input type="text" name="" value="" placeholder="Usuario"></li>
-                <li class="blackHoverRemove"><input type="password" name="" value="" placeholder="Contraseña"></li>
+                <li class="blackHoverRemove"><input type="text" value="" placeholder="Usuario"></li>
+                <li class="blackHoverRemove"><input type="password" value="" placeholder="Contraseña"></li>
                 <li class="lastCatItem blackHoverRemove"><button type="submit" name="button">Iniciar Sesión</button><a href="login.html" class="newUser">Registrarse</a></li>
               </ul>
             </li>
           </ul>
-
-        <button class="menuBtn2" type="button" name="button" id="basket"><i class="fa fa-shopping-basket"></i></button>
+          <button class="menuBtn2" type="button" id="basket">
+            <i class="fa fa-shopping-basket"></i>
+            <div id="basketCounter">0</div>
+          </button>
         </div>
       </div>
     </div>
   </header>
-  <div class="restaurantesGlobal">
+    <div class="restaurantesGlobal">
     <aside class="menuRestaurantes">
       <h2>Categorias</h2>
       <ul>
